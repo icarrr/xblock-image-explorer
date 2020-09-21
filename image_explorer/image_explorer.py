@@ -188,7 +188,7 @@ class ImageExplorerBlock(XBlock):  # pylint: disable=no-init
         )
         hotspot_image_url = self.runtime.local_resource_url(self, 'public/images/hotspot-sprite.png')
         fragment.add_css(self.resource_string('public/css/image_explorer.css'))
-        fragment.add_javascript_url(self.runtime.local_resource_url(self, 'public/js/image_explorer.js'))
+        fragment.add_javascript(self.resource_string('public/js/image_explorer.js'))
         if has_youtube:
             fragment.add_javascript_url('https://www.youtube.com/iframe_api')
 
@@ -196,7 +196,7 @@ class ImageExplorerBlock(XBlock):  # pylint: disable=no-init
             fragment.add_javascript_url(
                 '//player.ooyala.com/core/10efd95b66124001b415aa2a4bee29c8?plugins=main,bm'
             )
-            fragment.add_javascript_url(self.runtime.local_resource_url(self, 'public/js/ooyala_player.js'))
+            fragment.add_javascript(self.resource_string('public/js/ooyala_player.js'))
 
         fragment.initialize_js('ImageExplorerBlock', {'hotspot_image': hotspot_image_url,
                                                       'authoring_view': 'true' if authoring else 'false'})
@@ -280,7 +280,7 @@ class ImageExplorerBlock(XBlock):  # pylint: disable=no-init
         fragment.add_content(loader.render_django_template('/templates/html/image_explorer_edit.html',
                                                            context={'self': self},
                                                            i18n_service=self.runtime.service(self, 'i18n')))
-        fragment.add_javascript_url(self.runtime.local_resource_url(self, 'public/js/image_explorer_edit.js'))
+        fragment.add_javascript(self.resource_string('public/js/image_explorer_edit.js'))
 
         fragment.initialize_js('ImageExplorerEditBlock')
 

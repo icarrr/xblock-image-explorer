@@ -50,6 +50,7 @@
     -webkit-transition: all 0.0s linear 0s;
     -moz-transition: all 0.0s linear 0s;
     transition: all 0.0s linear 0s;
+    box-shadow: none;
 }
 
 .image-explorer-wrapper button.image-explorer-hotspot > span{ display: none;}
@@ -90,8 +91,6 @@ button.image-explorer-hotspot .image-explorer-hotspot-reveal .image-explorer-hot
 .image-explorer-close-reveal {
     /* background: url("../images/image-explorer-reveal-close.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); */
     float: right;
-    margin-right: 8px;
-    margin-top: 8px;
     margin-left: 20px;
     color: #FFFFFF;
     font-family: "fontawesome";
@@ -102,6 +101,7 @@ button.image-explorer-hotspot .image-explorer-hotspot-reveal .image-explorer-hot
     position: absolute;
     top: 0;
     right: 0;
+    box-shadow: none;
 }
 
 .codemirror-editor-wrapper {
